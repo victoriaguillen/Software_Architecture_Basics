@@ -1,6 +1,6 @@
 ﻿namespace Practice1
 {
-    class Taxi : Vehicle
+    class Taxi : VehicleWithPlate
     {
         //constant string as TypeOfVehicle wont change allong PoliceCar instances.
         private static string typeOfVehicle = "Taxi";
@@ -12,8 +12,7 @@
             //Values of atributes are set just when the instance is done if not needed before.
             isCarryingPassengers = false;
             SetSpeed(45.0f);
-            Console.WriteLine(WriteMessage("created"));
-          
+            Console.WriteLine(WriteMessage("created")); 
         }
 
         public void StartRide()

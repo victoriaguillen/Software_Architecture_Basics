@@ -47,7 +47,7 @@ namespace Practice1
             return $"{this}: {message}";
         }
 
-        public void AlertOfSpeeding(Vehicle vehicle)
+        public void AlertOfSpeeding(VehicleWithPlate vehicle)
         {
 
             if (vehicle.GetTypeOfVehicle() == "Taxi")

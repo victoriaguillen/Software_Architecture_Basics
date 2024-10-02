@@ -1,10 +1,10 @@
 ﻿namespace Practice1
 {
-    class Scooter : Vehicle
+    class Scooter : VehicleWithoutPlate
     {
         private static string typeOfVehicle = "Scooter";
 
-        public Scooter() : base(typeOfVehicle, null, false) 
+        public Scooter() : base(typeOfVehicle) 
         {
             Console.WriteLine(WriteMessage("created"));
         }

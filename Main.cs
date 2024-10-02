@@ -34,22 +34,23 @@
             //policeCar2.PrintRadarHistory();
 
             //--------------------------------------------------------
+            City city = new City("New York");
+            Console.WriteLine(city.WriteMessage("created."));
+
             PoliceStation policeStation = new PoliceStation("PoliceStation1");
             Console.WriteLine(policeStation.WriteMessage("created."));
 
             Taxi taxi3 = new Taxi("0003 CCC");
             Taxi taxi4 = new Taxi("0004 DDD");
 
-            PoliceCar policeCar3 = new PoliceCar("0003 CNP", false, policeStation);
-            PoliceCar policeCar4 = new PoliceCar("0004 CNP", true, policeStation);
-            
-
-            City city = new City("New York");
-            Console.WriteLine(city.WriteMessage("created."));
             taxi3.SetCity(city);
+            taxi4.SetCity(city);
 
             city.AddLicense(taxi3);
             city.AddLicense(taxi4);
+
+            PoliceCar policeCar3 = new PoliceCar("0003 CNP", false, policeStation);
+            PoliceCar policeCar4 = new PoliceCar("0004 CNP", true, policeStation);
 
             policeStation.AddPoliceCar(policeCar3);
             policeStation.AddPoliceCar(policeCar4);

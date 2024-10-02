@@ -2,7 +2,7 @@
 
 namespace Practice1
 {
-    class PoliceCar : Vehicle
+    class PoliceCar : VehicleWithPlate
     {
         //constant string as TypeOfVehicle wont change allong PoliceCar instances
         private const string typeOfVehicle = "Police Car"; 
@@ -48,7 +48,7 @@ namespace Practice1
 
         }
 
-        public void UseRadar(Vehicle vehicle)
+        public void UseRadar(VehicleWithPlate vehicle)
         {
             if (isPatrolling && speedRadar != null)
             {              
@@ -60,6 +60,7 @@ namespace Practice1
                 {
                     Console.WriteLine(WriteMessage($"is now chassing vehicle with plate {vehicle.GetPlate()}. Alert sended to {GetPoliceStation()}"));
                     NotifyPoliceStation(GetPlate(), vehicle.GetPlate());
+
 
                     if (vehicle.hasCity)
                     {
@@ -122,7 +123,6 @@ namespace Practice1
 
         public void StartChasing(string plate)
         {
-
             this.chasing = true;
             Console.WriteLine(WriteMessage($"is now chassing vehicle with plate {plate}"));
         }
