@@ -61,10 +61,10 @@ namespace Practice1
                     Console.WriteLine(WriteMessage($"is now chassing vehicle with plate {vehicle.GetPlate()}. Alert sended to {GetPoliceStation()}"));
                     NotifyPoliceStation(GetPlate(), vehicle.GetPlate());
 
-
+                    //if the vehicle does not has city, for the moment nothing happens
                     if (vehicle.hasCity)
                     {
-                        vehicle.GetCity().AlertOfSpeeding(vehicle);
+                        vehicle.GetCity().AlertOfSpeeding(vehicle); //method for removing the license to the taxi
                     }     
                 } 
             }

@@ -22,7 +22,7 @@ namespace Practice1
 
         public string GetPoliceStationName()
         { 
-            return this.name; 
+            return name; 
         }
 
         //method for adding police cars to the police station
@@ -48,11 +48,8 @@ namespace Practice1
                 {
                     car.StartChasing(tPlate);
                 }
-
             }
-
         }
-
 
         //Property for obtaining the list of police cars
         public List<PoliceCar> GetPoliceCars()

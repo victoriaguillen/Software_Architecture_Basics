@@ -47,9 +47,9 @@ namespace Practice1
             return $"{this}: {message}";
         }
 
+        //for now the moment this method is  designed for work with only taxis
         public void AlertOfSpeeding(VehicleWithPlate vehicle)
         {
-
             if (vehicle.GetTypeOfVehicle() == "Taxi")
             {
                 string plate = vehicle.GetPlate();
@@ -57,9 +57,9 @@ namespace Practice1
 
                 for (int i = 0; i < this.licensesList.Count; i++)
                 {
-                    if (this.licensesList[i].GetPlate() == plate)
+                    if (licensesList[i].GetPlate() == plate)
                     {
-                        this.licensesList.RemoveAt(i);
+                        licensesList.RemoveAt(i);
                         Console.WriteLine(WriteMessage($"removed license to taxi with plate :{vehicle.GetPlate()}"));
                         found = true;
                     }
@@ -69,7 +69,6 @@ namespace Practice1
                 {
                     Console.WriteLine(WriteMessage($"taxi with plate {vehicle.GetPlate()} has no license in this city."));
                 }
-
             }
         }
     }
